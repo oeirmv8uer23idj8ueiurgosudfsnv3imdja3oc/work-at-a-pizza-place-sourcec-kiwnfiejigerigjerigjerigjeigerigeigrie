@@ -233,7 +233,10 @@ ca:AddButton({
 	Callback = function()
 		safeskripz()
 		car = true
+		if carselected == "" then return end
+		if cartrollmethod == "None" then return end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-598.856628, 3.94226718, -480.514252, -0.0779116824, -1.75436976e-09, -0.996960282, -3.61167252e-09, 1, -1.47746948e-09, 0.996960282, 3.48558182e-09, -0.0779116824)
+		if cartrollmethod == "Annoy Player" then
 		wait(0.3)
 		local args = {
 			[1] = "PickingCar",
@@ -265,6 +268,7 @@ ca:AddButton({
 				game.Players.LocalPlayer.Character.UpperTorso.CFrame = carselected.Character.HumanoidRootPart.CFrame * CFrame.new(0,2.5,-10)
 				if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then car = false annoy = false return end
 			end
+		end
   	end    
 })
 
