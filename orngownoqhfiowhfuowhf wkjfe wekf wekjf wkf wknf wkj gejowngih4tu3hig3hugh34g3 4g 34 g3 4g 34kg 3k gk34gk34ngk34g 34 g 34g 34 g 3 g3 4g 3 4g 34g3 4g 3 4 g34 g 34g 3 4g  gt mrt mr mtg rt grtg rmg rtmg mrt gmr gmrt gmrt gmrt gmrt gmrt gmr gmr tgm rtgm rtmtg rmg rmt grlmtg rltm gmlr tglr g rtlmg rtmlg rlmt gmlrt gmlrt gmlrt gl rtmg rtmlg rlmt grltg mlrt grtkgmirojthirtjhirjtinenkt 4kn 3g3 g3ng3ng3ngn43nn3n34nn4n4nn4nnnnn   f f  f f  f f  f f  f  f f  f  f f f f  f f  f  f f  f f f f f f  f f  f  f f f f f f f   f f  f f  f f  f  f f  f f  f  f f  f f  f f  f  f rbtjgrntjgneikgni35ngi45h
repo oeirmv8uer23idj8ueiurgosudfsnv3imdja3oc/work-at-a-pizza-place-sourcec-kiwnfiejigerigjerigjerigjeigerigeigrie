@@ -1,0 +1,631 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{Title="Script",Text="Loading Script...",Duration=1})
+
+wait(0.5)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{Title="Script",Text="Loading Gui..",Duration=1})
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+game:GetService("StarterGui"):SetCore("SendNotification",{Title="Script",Text="Loading Function...",Duration=1})
+
+local Window = OrionLib:MakeWindow({Name = "f0rtuit0us hub [BETA VERSION]", HidePremium = false, SaveConfig = false, ConfigFolder = ""})
+
+local function safeskripz()
+    if safedestroyroom == true then
+        OrionLib:MakeNotification({
+            Name = "Script Warning",
+            Content = "Tree Room Function Still Working Please Wait Until It Done! If You Don't Want To Wait Please Disable It!",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+         return end
+         if safecartrol == true then
+            OrionLib:MakeNotification({
+                Name = "Script Warning",
+                Content = "Car Troll Player Function Still Working Please Wait Until It Done! If You Don't Want To Wait Please Disable It!",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+             return end
+             if flingall == true then
+                OrionLib:MakeNotification({
+                    Name = "Script Warning",
+                    Content = "Fling All Players Function Still Working Please Wait Until It Done! If You Don't Want To Wait Please Disable It!",
+                    Image = "rbxassetid://4483345998",
+                    Time = 5
+                })
+                 return end
+                 if flingplr == true then
+                    OrionLib:MakeNotification({
+                        Name = "Script Warning",
+                        Content = "Fling Player Function Still Working Please Wait Until It Done! If You Don't Want To Wait Please Disable It!",
+                        Image = "rbxassetid://4483345998",
+                        Time = 5
+                    })
+                     return end
+                     if flingallcar == true then
+                        OrionLib:MakeNotification({
+                            Name = "Script Warning",
+                            Content = "Fling All Car Function Still Working Please Wait Until It Done! If You Don't Want To Wait Please Disable It!",
+                            Image = "rbxassetid://4483345998",
+                            Time = 5
+                        })
+                         return end
+                         if looptptoplr == true then
+                            OrionLib:MakeNotification({
+                                Name = "Script Warning",
+                                Content = "Loop Teleport To Player Still Working Please Disable It!",
+                                Image = "rbxassetid://4483345998",
+                                Time = 5
+                            })
+                             return end
+end
+
+local function checkanti()
+	if antisit == true then
+		OrionLib:MakeNotification({
+			Name = "Script Warning",
+			Content = "Loop Teleport To Player Still Working Please Disable It!",
+			Image = "rbxassetid://4483345998",
+			Time = 5
+		})
+		 return end
+end
+
+local function GetRoot(plr)
+	local RootPart = plr.Character:FindFirstChild("HumanoidRootPart") or plr.Character:FindFirstChild("Torso") or plr.Character:FindFirstChild("UpperTorso")
+	return RootPart
+end
+
+localplr = game.Players.LocalPlayer
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local trol = Window:MakeTab({
+	Name = "Troll Functions",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local admin = Window:MakeTab({
+	Name = "Admin Functions",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local lp = Window:MakeTab({
+	Name = "Character Function",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local tp = Window:MakeTab({
+	Name = "Teleport Function",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local anti = Window:MakeTab({
+	Name = "Anti Function",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local ser = Window:MakeTab({
+	Name = "Server Function",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local setinlel = Window:MakeTab({
+	Name = "Setting",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Status: Working✅")
+
+Tab:AddButton({
+	Name = "Copy Discord Link",
+	Callback = function()
+      	setclipboard("https://discord.gg/s8gGAms7wA")
+  	end    
+})
+
+local Section = trol:AddSection({
+	Name = "Tree Room Function"
+})
+
+trol:AddDropdown({
+	Name = "Select Room",
+	Default = "None",
+	Options = {"None", "Chasier", "Cook Room", "Pizza Boxer Room", "Delivery", "Supplier 1", "Supplier 2", "Manager", "Secret Room"},
+	Callback = function(roommamsdoawdmo)
+		roomas = roommamsdoawdmo
+	end    
+})
+
+trol:AddDropdown({
+	Name = "Select Method",
+	Default = "None",
+	Options = {"None", "Bring The Tree That Alr Unanchored", "Unanchored all trees and bring", "Unanchored random trees and bring"},
+	Callback = function(vsdcvdxzczx)
+		methud = vsdcvdxzczx
+	end    
+})
+
+trol:AddButton({
+	Name = "Start Bringing Tree To The Room",
+	Callback = function()
+        safeskripz()
+        safedestroyroom = true
+      	if roomas == "None" then return end
+        if methud == "None" then return end
+        if roomas == "Chasier" then
+            targetroom = CFrame.new(math.random(40,55), 10.8767643, math.random(105,135))
+        elseif roomas == "Cook Room" then
+            targetroom = CFrame.new(math.random(52,60), 9.02200365, math.random(39,41))
+        elseif roomas == "Pizza Boxer Room" then
+            targetroom = CFrame.new(math.random(53,60), 9.85873413, math.random(36,41))
+        elseif roomas == "Delivery" then
+            targetroom = CFrame.new(math.random(57,60), 11.85873413, math.random(-16,16))
+		elseif roomas == "Supplier 1" then
+            targetroom = CFrame.new(math.random(0,20), 15.85873413, math.random(-1000,-1075))
+		elseif roomas == "Supplier 2" then
+            targetroom = CFrame.new(math.random(0,20), 12.85873413, math.random(0,-25))
+		elseif roomas == "Manager" then
+            targetroom = CFrame.new(23.503047943115234, 11.55947732925415, 6.556452751159668)
+		elseif roomas == "Manager" then
+            targetroom = CFrame.new(66.9395676, 11.80013275, 57.0806274)
+		end
+        if methud == "Bring The Tree That Alr Unanchored" then
+			oldcf
+            for wrof,odwadvs in pairs(game.workspace:GetChildren()) do
+                if odwadvs.Name == "Tree" or odwadvs.Name == "DeadTree" or odwadvs.Name == "SpookyTree" then
+                    for wfsds,erajs in pairs(odwadvs:GetDescendants()) do
+                        if erajs:IsA("Part") or erajs:IsA("MeshPart") or erajs:IsA("BasePart") then
+                            if erajs.Anchored == false then
+								GetRoot(localplr).CFrame = targetroom
+								wait()
+                                erajs.CFrame = targetroom
+                                if sethiddenproperty then
+                                    sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
+			wait()
+			safedestroyroom = false
+        elseif methud == "Unanchored all trees and bring" then
+            oldcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            if game.workspace:FindFirstChild("Camera") then
+                game.workspace:FindFirstChild("Camera"):Destroy()
+        end
+        for eihn,adim in pairs(game.workspace.Trees:GetChildren()) do
+GetRoot(localplr).CFrame = adim:FindFirstChild("LeavesMain").CFrame
+            workspace.Main.UprootTree:FireServer(adim) wait(0.2)
+        end
+        for oefwk,sdvin in pairs(game.workspace:GetChildren()) do
+            if sdvin.Name == "Tree" or sdvin.Name == "DeadTree" or sdvin.Name == "SpookyTree" then
+                for wiwefa,jaisf in pairs(sdvin:GetDescendants()) do
+                    if jaisf:IsA("Part") or jaisf:IsA("MeshPart") or jaisf:IsA("BasePart") then
+                        jaisf.CFrame = targetroom
+                    end
+                end
+            end
+        end
+        for cx,came in pairs(game.workspace:GetChildren()) do
+            if came:IsA("Camera") then
+                came:Destroy()
+                game.workspace:WaitForChild(came.name).CameraSubject = game.Players.LocalPlayer.Character
+                game.workspace:WaitForChild(came.name).CameraType = "Custom"
+            end
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
+		safedestroyroom = false
+        elseif methud == "Unanchored random trees and bring" then
+            oldcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            if game.workspace:FindFirstChild("Camera") then
+                game.workspace:FindFirstChild("Camera"):Destroy()
+        end
+        for eihn,adim in pairs(game.workspace.Trees:GetChildren()) do
+            GetRoot(localplr).CFrame = adim:FindFirstChild("LeavesMain").CFrame
+            workspace.Main.UprootTree:FireServer(adim) 
+			task.wait(0.11)
+        end
+        for oefwk,sdvin in pairs(game.workspace:GetChildren()) do
+            if sdvin.Name == "Tree" or sdvin.Name == "DeadTree" or sdvin.Name == "SpookyTree" then
+                for wiwefa,jaisf in pairs(sdvin:GetDescendants()) do
+                    if jaisf:IsA("Part") or jaisf:IsA("MeshPart") or jaisf:IsA("BasePart") then
+                        jaisf.CFrame = targetroom
+                    end
+                end
+            end
+        end
+        for cx,came in pairs(game.workspace:GetChildren()) do
+            if came:IsA("Camera") then
+                came:Destroy()
+                game.workspace:WaitForChild(came.name).CameraSubject = game.Players.LocalPlayer.Character
+                game.workspace:WaitForChild(came.name).CameraType = "Custom"
+            end
+        end
+        wait()
+		safedestroyroom = false
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
+        end
+  	end    
+})
+
+local Section = lp:AddSection({
+	Name = "Reset Character"
+})
+
+lp:AddDropdown({
+	Name = "Reset Method",
+	Default = "None",
+	Options = {"None", "Normal Reset", "Remove Character", "Remove Head", "Remove Upper Torso"},
+	Callback = function(asmsddwasd)
+		resetmtd = asmsddwasd
+	end    
+})
+
+lp:AddButton({
+	Name = "Reset",
+	Callback = function()
+		if resetmtd == "None" or resetmtd == "" then return end
+		if resetmtd == "Normal Reset" then
+			for asdw,abce in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+				if abce:IsA("Part") or abce:IsA("BasePart") or abce:IsA("MeshPart") then
+					if abce.Anchored then
+						abce.Anchored = false
+					end
+						game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
+					end
+				end
+		elseif resetmtd == "Remove Character" then
+		for asdw,abce in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if abce:IsA("Part") or abce:IsA("BasePart") or abce:IsA("MeshPart") then
+				if abce.Anchored then
+					abce.Anchored = false
+				end
+					game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(9999999999999,-475,9999999999999)
+				end
+			end
+	elseif  resetmtd == "Remove Head" then
+		for asdw,abce in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if abce:IsA("Part") or abce:IsA("BasePart") or abce:IsA("MeshPart") then
+				if abce.Anchored then
+					abce.Anchored = false
+				end
+					game.Players.LocalPlayer.Character:FindFirstChild("Head"):Destroy()
+				end
+			end
+		elseif  resetmtd == "Remove Upper Torso" then
+			for asdw,abce in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+				if abce:IsA("Part") or abce:IsA("BasePart") or abce:IsA("MeshPart") then
+					if abce.Anchored then
+						abce.Anchored = false
+					end
+						game.Players.LocalPlayer.Character:FindFirstChild("UpperTorso"):Destroy()
+					end
+				end
+		end
+	end
+})
+local Section = lp:AddSection({
+	Name = "Remove Character Part"
+})
+
+lp:AddDropdown({
+	Name = "Which Part",
+	Default = "None",
+	Options = {"None", "HumanoidRootPart (IMPORTANT PART IF YOU REMOVE YOU WILL CANT TP OR MOVE)", "Head", "UpperTorso", "LowerTorso", "RightUpperArm", "RightLowerArm", "RightHand", "LeftUpperArm", "LeftLowerArm", "LeftHand", "UpperRightLeg", "LowerRightLeg", "LeftFoot", "UpperLeftLeg", "LeftLowerLeg", "LeftFoot"},
+	Callback = function(tyjtyjtktyktky)
+		rartrt = tyjtyjtktyktky
+	end    
+})
+
+lp:AddButton({
+	Name = "Remove The Part",
+	Callback = function()
+        if rartrt == "None" then return end
+        if rartrt == "HumanoidRootPart (IMPORTANT PART IF YOU REMOVE YOU WILL CANT TP OR MOVE)" then 
+            game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):Destroy() 
+        end
+        game.Players.LocalPlayer.Character:FindFirstChild(rartrt):Destroy()
+    end
+})
+
+tp:AddDropdown({
+	Name = "Teleport to",
+	Default = "None",
+	Options = {"None", "Chasier", "Cook Room", "Pizza Boxer Room", "Delivery", "Supplier 1", "Supplier 2", "Manager", "Secret Room", "Secret Island 1", "Secret Island 2", "Secret Island 3", "Treasure Box", "NPC Model / Player Model", "Void"},
+	Callback = function(ntrhtrr)
+		mmmmvn = ntrhtrr
+	end    
+})
+
+tp:AddButton({
+	Name = "Teleport",
+	Callback = function()
+		if mmmmvn == "None" then return end
+		if mmmmvn == "Chasier" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(49.21665573120117, 5.559611797332764, 81.80149841308594)
+		elseif mmmmvn == "Cook Room" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(36.828102111816406, 5.559611797332764, 54.923194885253906)
+        elseif mmmmvn == "Pizza Boxer Room" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(58.276771545410156, 5.559479236602783, 12.857112884521484)
+        elseif mmmmvn == "Delivery" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.4651870727539, 5.559477806091309, -16.698089599609375)
+        elseif mmmmvn == "Supplier 1" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7.078830242156982, 14.759479522705078, -1022.709716796875)
+            elseif mmmmvn == "Supplier 2" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(20.350505828857422, 9.423501968383789, -18.48685646057129)
+                elseif mmmmvn == "Manager" then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.503047943115234, 5.55947732925415, 6.556452751159668)
+                    elseif mmmmvn == "Secret Room" then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76, 9.80000973, 66.2000885, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+                        wait(0.2)
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(66.9395676, 3.80013275, 57.0806274, -0.0174474921, -9.55089732e-08, -0.99984777, -2.33258266e-08, 1, -9.51164765e-08, 0.99984777, 2.16627321e-08, -0.0174474921)
+                        elseif mmmmvn == "Secret Island 1" then
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1762.877685546875, 99.78225708007812, -1315.40234375)
+                            elseif mmmmvn == "Secret Island 2" then
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1080.8824462890625, 38.98041534423828, 695.8370361328125)
+                                elseif mmmmvn == "Secret Island 3" then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1523.5025634765625, 7.199774742126465, 1346.3701171875)
+                                    elseif mmmmvn == "Treasure Box" then
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1765.68005, 2.18993378, -1263.5426, 0.999646902, -6.38627355e-08, -0.0265712608, 6.3780881e-08, 1, -3.92788113e-09, 0.0265712608, 2.23175589e-09, 0.999646902)
+                                        elseif mmmmvn == "NPC Model / Player Model" then 
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.222406209, 10958.9971, 0.12333262, 0.999391615, -3.49096183e-08, -0.0348776579, 3.51585321e-08, 1, 6.523456e-09, 0.0348776579, -7.74573472e-09, 0.999391615)
+		elseif mmmmvn == "Void" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10000000000000,10000000000000,10000000000000)
+		end
+	end
+})
+
+local Section = tp:AddSection({
+	Name = "Teleport to player"
+})
+
+tp:AddDropdown({
+	Name = "Select player",
+	Default = "",
+	Options = plrlel,
+	Callback = function(utjtjhfvfvdv)
+		tpselected = game.Players[utjtjhfvfvdv]
+	end    
+})
+
+tp:AddToggle({
+	Name = "Loop Teleport To Player",
+	Default = false,
+	Callback = function(afwefwef)
+		safeskripz()
+        looptp = afwefwef
+		while looptp == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = tpselected.Character.HumanoidRootPart.CFrame * CFrame.new(XTPLOELO,ysefwefwefas,zzzzzzzzzzzzzzzz)
+            task.wait(cdlel)
+        end    
+    end
+})
+
+tp:AddTextbox({
+	Name = "Loop Teleport Cooldown",
+	Default = "0",
+	TextDisappear = false,
+	Callback = function(wevwevwev)
+		cdlel = wevwevwev
+	end	  
+})
+
+tp:AddButton({
+	Name = "Teleport To Player",
+	Callback = function()
+        safeskripz()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = tpselected.Character.HumanoidRootPart.CFrame * CFrame.new(XTPLOELO,ysefwefwefas,zzzzzzzzzzzzzzzz)
+  	end    
+})
+
+tp:AddButton({
+	Name = "Teleport to your old position",
+	Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcfrfwefwef
+  	end    
+})
+
+local Section = tp:AddSection({
+	Name = "Set your position"
+})
+
+tp:AddButton({
+	Name = "Set your position",
+	Callback = function()
+        oldcfrfwefwef = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    end
+})
+
+local Section = admin:AddSection({
+	Name = "Annoying Sounds"
+})
+
+admin:AddButton({
+	Name = "Play All Sounds In The Game",
+	Callback = function()
+      		for ad,esf in pairs(game:GetDescendants()) do
+				if esf:IsA("Sound") then
+					esf:Play()
+					task.wait()
+				end
+			end
+  	end    
+})
+
+admin:AddToggle({
+	Name = "Loop Play All Sounds In The Game",
+	Default = false,
+	Callback = function(awadsads)
+		feeff = awadsads
+		while feeff == true do task.wait()
+		for ad,esf in pairs(game:GetDescendants()) do
+			if esf:IsA("Sound") then
+				esf:Play()
+				task.wait()
+			end
+		end
+	end
+	end    
+})
+
+local Section = anti:AddSection({
+	Name = "Anti Sit Function"
+})
+
+anti:AddToggle({
+	Name = "Anti Sit",
+	Default = false,
+	Callback = function(efwfefwefweadsasccdbdf)
+		antisit = efwfefwefweadsasccdbdf
+		if antisit == false then 
+			for sitpart,allsitpart in pairs(game.workspace:GetDescendants()) do
+				if allsitpart:IsA("Seat") or allsitpart:IsA("VehicleSeat") then
+					if allsitpart.Disabled == true then
+						allsitpart.Disabled = false
+					end
+				end
+			end
+			return 
+		elseif antisit == true then
+			for sitpart,allsitpart in pairs(game.workspace:GetDescendants()) do
+				if allsitpart:IsA("Seat") or allsitpart:IsA("VehicleSeat") then
+					if allsitpart.Disabled == false then
+						allsitpart.Disabled = true
+					end
+				end
+			end
+		end
+		local function asdawdsccxxc(allsitparttt)
+			if allsitparttt:IsA("Seat") or allsitparttt:IsA("VehicleSeat") then
+				if allsitparttt.Disabled == false then
+					allsitparttt.Disabled = true
+				end
+			end
+		end
+		game:GetService("Workspace").DescendantAdded:Connect(
+			function(allsitparttt)
+				asdawdsccxxc(allsitparttt)
+			end)
+	end    
+})
+
+
+ser:AddButton({
+	Name = "Rejoin Server",
+	Callback = function()
+game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game:GetService("Players").LocalPlayer)
+  	end    
+})
+
+ser:AddButton({
+	Name = "Change Server / Server Hop",
+	Callback = function()
+	OrionLib:MakeNotification({ Name = "Server Hop", Content = "Changing,Hopping Server Please Wait!", Image = "rbxassetid://14659499957", Time = 3.5 })
+local Player = game.Players.LocalPlayer    
+local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place,_id = game.PlaceId, game.JobId
+local _servers = Api.._place.."/servers/Public?sortOrder=Desc&limit=100"
+function ListServers(cursor)
+   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+   return Http:JSONDecode(Raw)
+end
+
+local Next; repeat
+   local Servers = ListServers(Next)
+   for i,v in next, Servers.data do
+       if v.playing < v.maxPlayers and v.id ~= _id then
+           local s,r = pcall(TPS.TeleportToPlaceInstance,TPS,_place,v.id,Player)
+           if s then break end
+       end
+   end
+   
+   Next = Servers.nextPageCursor
+until not Next
+  	end    
+})
+ser:AddButton({
+	Name = "Join Lowest Players Server",
+	Callback = function()
+	OrionLib:MakeNotification({ Name = "Lower Plr Server", Content = "Finding Server Please Wait!", Image = "rbxassetid://14659499957", Time = 3.5 })
+local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place = game.PlaceId
+local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+function ListServers(cursor)
+   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+   return Http:JSONDecode(Raw)
+end
+
+local Server, Next; repeat
+   local Servers = ListServers(Next)
+   Server = Servers.data[1]
+   Next = Servers.nextPageCursor
+until Server
+
+TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+  	end    
+})
+
+local Section = setinlel:AddSection({
+	Name = "Teleport Setting"
+})
+
+setinlel:AddSlider({
+	Name = "X",
+	Min = -50,
+	Max = 50,
+	Default = 0,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "",
+	Callback = function(asdawd)
+		XTPLOELO = asdawd
+	end    
+})
+
+setinlel:AddSlider({
+	Name = "Y",
+	Min = -50,
+	Max = 50,
+	Default = 0,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "",
+	Callback = function(tytjtjtyj)
+		ysefwefwefas = tytjtjtyj
+	end    
+})
+
+setinlel:AddSlider({
+	Name = "Z",
+	Min = -50,
+	Max = 50,
+	Default = 0,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "",
+	Callback = function(uyueijeugheugh)
+		zzzzzzzzzzzzzzzz = uyueijeugheugh
+	end    
+})
