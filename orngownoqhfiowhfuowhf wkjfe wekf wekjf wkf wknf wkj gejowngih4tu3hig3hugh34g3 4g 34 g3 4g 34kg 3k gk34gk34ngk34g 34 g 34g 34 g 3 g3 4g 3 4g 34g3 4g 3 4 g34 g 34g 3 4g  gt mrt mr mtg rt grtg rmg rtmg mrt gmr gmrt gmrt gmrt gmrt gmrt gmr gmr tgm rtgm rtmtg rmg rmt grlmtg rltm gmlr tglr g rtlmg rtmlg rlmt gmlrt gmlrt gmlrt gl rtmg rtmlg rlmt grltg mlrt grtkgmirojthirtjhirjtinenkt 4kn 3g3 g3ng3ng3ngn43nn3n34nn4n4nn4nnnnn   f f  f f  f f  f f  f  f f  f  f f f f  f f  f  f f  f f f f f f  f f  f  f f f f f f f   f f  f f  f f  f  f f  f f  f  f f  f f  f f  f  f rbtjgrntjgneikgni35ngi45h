@@ -28,14 +28,6 @@ OrionLib:MakeNotification({
 	Time = 10
 })
 
-local plrlel = {}
-
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-	if v.Name == game.Players.LocalPlayer.Name == false then
-    	table.insert(plrlel,v.Name)
-	end
-end
-
 
 remoteparent = game:GetService("ReplicatedStorage"):FindFirstChild("RE")
 gunsoundremote = game:GetService("ReplicatedStorage").RE:FindFirstChild("1Gu1nSound1s")
@@ -209,6 +201,14 @@ Tab:AddButton({
       	setclipboard("https://discord.gg/s8gGAms7wA")
   	end    
 })
+
+local plrlel = {}
+
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+	if v.Name == game.Players.LocalPlayer.Name == false then
+    	table.insert(plrlel,v.Name)
+	end
+end
 
 ca:AddDropdown({
 	Name = "Select Player",
