@@ -491,7 +491,7 @@ local Section = admin:AddSection({
 admin:AddButton({
 	Name = "Play All Player Sounds On Yourself",
 	Callback = function()
-      		for ad,esf in pairs(game.Players.LocalPlayer:GetDescendants()) do
+      		for ad,esf in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
 				if esf:IsA("Sound") then
 					esf:Play()
 					task.wait()
@@ -503,12 +503,14 @@ admin:AddButton({
 admin:AddButton({
 	Name = "Play All Player Sounds On Everyone",
 	Callback = function()
-      		for ad,esf in pairs(game.Players:GetDescendants()) do
+		for asd,awd in pairs(game.Players:GetPlayers()) do
+      		for ad,esf in pairs(awd.Character:GetDescendants()) do
 				if esf:IsA("Sound") then
 					esf:Play()
 					task.wait()
 				end
 			end
+		end
   	end    
 })
 
@@ -518,7 +520,7 @@ admin:AddToggle({
 	Callback = function(awadsads)
 		feeff = awadsads
 		while feeff == true do task.wait()
-		for ad,esf in pairs(game.Players.LocalPlayer:GetDescendants()) do
+		for ad,esf in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
 			if esf:IsA("Sound") then
 				esf:Play()
 				task.wait()
@@ -534,13 +536,15 @@ admin:AddToggle({
 	Callback = function(cewczczx)
 		ergderggrvsdcsc = cewczczx
 		while ergderggrvsdcsc == true do task.wait()
-		for ad,esf in pairs(game.Players:GetDescendants()) do
-			if esf:IsA("Sound") then
-				esf:Play()
-				task.wait()
-			end
+			for asd,awd in pairs(game.Players:GetPlayers()) do
+				for ad,esf in pairs(awd.Character:GetDescendants()) do
+				  if esf:IsA("Sound") then
+					  esf:Play()
+					  task.wait()
+				  end
+			  end
+		  end
 		end
-	end
 	end    
 })
 
