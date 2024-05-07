@@ -471,10 +471,70 @@ admin:AddButton({
 admin:AddToggle({
 	Name = "Loop Play All Sounds In The Game",
 	Default = false,
+	Callback = function(egegrsasacac)
+		rrntrnt = egegrsasacac
+		while rrntrnt == true do task.wait()
+		for ad,esf in pairs(game:GetDescendants()) do
+			if esf:IsA("Sound") then
+				esf:Play()
+				task.wait()
+			end
+		end
+	end
+	end    
+})
+
+local Section = admin:AddSection({
+	Name = "Play Annoying Sounds On Player"
+})
+
+admin:AddButton({
+	Name = "Play All Player Sounds On Yourself",
+	Callback = function()
+      		for ad,esf in pairs(game.Players.LocalPlayer:GetDescendants()) do
+				if esf:IsA("Sound") then
+					esf:Play()
+					task.wait()
+				end
+			end
+  	end    
+})
+
+admin:AddButton({
+	Name = "Play All Player Sounds On Everyone",
+	Callback = function()
+      		for ad,esf in pairs(game.Players:GetDescendants()) do
+				if esf:IsA("Sound") then
+					esf:Play()
+					task.wait()
+				end
+			end
+  	end    
+})
+
+admin:AddToggle({
+	Name = "Loop Play All Player Sounds On Yourself",
+	Default = false,
 	Callback = function(awadsads)
 		feeff = awadsads
 		while feeff == true do task.wait()
-		for ad,esf in pairs(game:GetDescendants()) do
+		for ad,esf in pairs(game.Players.LocalPlayer:GetDescendants()) do
+			if esf:IsA("Sound") then
+				esf:Play()
+				task.wait()
+			end
+		end
+	end
+	end    
+})
+
+admin:AddToggle({
+	Name = "Loop Play All Player Sounds On Everyone",
+	Default = false,
+	Callback = function(cewczczx)
+		ergderggrvsdcsc = cewczczx
+		while ergderggrvsdcsc == true do task.wait()
+		for ad,esf in pairs(game.Players:GetDescendants()) do
 			if esf:IsA("Sound") then
 				esf:Play()
 				task.wait()
