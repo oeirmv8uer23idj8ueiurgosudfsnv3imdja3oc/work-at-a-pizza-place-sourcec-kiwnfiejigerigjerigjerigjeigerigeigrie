@@ -183,7 +183,7 @@ trol:AddButton({
             targetroom = CFrame.new(66.9395676, 11.80013275, 57.0806274)
 		end
         if methud == "Bring The Tree That Alr Unanchored" then
-			oldcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			oldcf
             for wrof,odwadvs in pairs(game.workspace:GetChildren()) do
                 if odwadvs.Name == "Tree" or odwadvs.Name == "DeadTree" or odwadvs.Name == "SpookyTree" then
                     for wfsds,erajs in pairs(odwadvs:GetDescendants()) do
@@ -471,9 +471,9 @@ admin:AddButton({
 admin:AddToggle({
 	Name = "Loop Play All Sounds In The Game",
 	Default = false,
-	Callback = function(egegrsasacac)
-		rrntrnt = egegrsasacac
-		while rrntrnt == true do task.wait()
+	Callback = function(awadsads)
+		feeff = awadsads
+		while feeff == true do task.wait()
 		for ad,esf in pairs(game:GetDescendants()) do
 			if esf:IsA("Sound") then
 				esf:Play()
@@ -481,70 +481,6 @@ admin:AddToggle({
 			end
 		end
 	end
-	end    
-})
-
-local Section = admin:AddSection({
-	Name = "Play Annoying Sounds On Player"
-})
-
-admin:AddButton({
-	Name = "Play All Player Sounds On Yourself",
-	Callback = function()
-      		for ad,esf in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-				if esf:IsA("Sound") then
-					esf:Play()
-					task.wait()
-				end
-			end
-  	end    
-})
-
-admin:AddButton({
-	Name = "Play All Player Sounds On Everyone",
-	Callback = function()
-		for asd,awd in pairs(game.Players:GetPlayers()) do
-      		for ad,esf in pairs(awd.Character:GetDescendants()) do
-				if esf:IsA("Sound") then
-					esf:Play()
-					task.wait()
-				end
-			end
-		end
-  	end    
-})
-
-admin:AddToggle({
-	Name = "Loop Play All Player Sounds On Yourself",
-	Default = false,
-	Callback = function(awadsads)
-		feeff = awadsads
-		while feeff == true do task.wait()
-		for ad,esf in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-			if esf:IsA("Sound") then
-				esf:Play()
-				task.wait()
-			end
-		end
-	end
-	end    
-})
-
-admin:AddToggle({
-	Name = "Loop Play All Player Sounds On Everyone",
-	Default = false,
-	Callback = function(cewczczx)
-		ergderggrvsdcsc = cewczczx
-		while ergderggrvsdcsc == true do task.wait()
-			for asd,awd in pairs(game.Players:GetPlayers()) do
-				for ad,esf in pairs(awd.Character:GetDescendants()) do
-				  if esf:IsA("Sound") then
-					  esf:Play()
-					  task.wait()
-				  end
-			  end
-		  end
-		end
 	end    
 })
 
@@ -621,7 +557,7 @@ local Next; repeat
            if s then break end
        end
    end
-   
+
    Next = Servers.nextPageCursor
 until not Next
   	end    
