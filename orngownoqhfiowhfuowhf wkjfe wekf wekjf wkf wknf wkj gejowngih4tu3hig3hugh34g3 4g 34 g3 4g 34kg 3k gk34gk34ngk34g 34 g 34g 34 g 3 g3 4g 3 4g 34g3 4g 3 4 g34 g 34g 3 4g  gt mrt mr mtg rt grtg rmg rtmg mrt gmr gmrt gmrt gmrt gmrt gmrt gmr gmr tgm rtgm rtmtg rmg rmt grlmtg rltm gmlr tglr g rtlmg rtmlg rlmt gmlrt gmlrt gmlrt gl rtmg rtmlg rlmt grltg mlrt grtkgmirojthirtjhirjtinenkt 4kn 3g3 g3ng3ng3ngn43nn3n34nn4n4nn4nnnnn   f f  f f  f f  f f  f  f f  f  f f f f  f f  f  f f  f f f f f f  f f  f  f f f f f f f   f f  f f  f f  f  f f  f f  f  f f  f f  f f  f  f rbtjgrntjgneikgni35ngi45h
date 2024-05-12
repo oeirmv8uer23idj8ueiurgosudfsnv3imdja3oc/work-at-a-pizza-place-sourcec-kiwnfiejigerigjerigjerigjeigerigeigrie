@@ -43,13 +43,6 @@ local function safeskripz()
                         Time = 5
                     })
                      return end
-                     if flingallcar == true then
-                        OrionLib:MakeNotification({
-                            Name = "Script Warning",
-                            Content = "Fling All Car Function Still Working Please Wait Until It Done! If You Don't Want To Wait Please Disable It!",
-                            Image = "rbxassetid://4483345998",
-                            Time = 5
-                        })
                          return end
                          if looptptoplr == true then
                             OrionLib:MakeNotification({
@@ -59,6 +52,14 @@ local function safeskripz()
                                 Time = 5
                             })
                              return end
+							 if safetrolcar == true then
+								OrionLib:MakeNotification({
+									Name = "Script Warning",
+									Content = "Troll Cars Function Still Working Please Disable It!",
+									Image = "rbxassetid://4483345998",
+									Time = 5
+								})
+								return end
 end
 
 local function checkanti()
@@ -537,6 +538,9 @@ trol:AddButton({
 	Name = "Start Troll Function",
 	Callback = function()
 		if trollcars == "None" then return end
+		safeskripz()
+		oldcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		safetrolcar = true
 		if trollcars == "Void All Car" then
 			for xsdcdsc,bfgcv in pairs(game.workspace.Cars:GetDescendants()) do
 				if bfgcv:IsA("VehicleSeat") then
@@ -552,6 +556,9 @@ trol:AddButton({
 					end
 				end
 			end
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
+			wait(0.1)
+			safetrolcar = false
 		elseif trollcars == "Remove All Car" then
 			for xsdcdsc,bfgcv in pairs(game.workspace.Cars:GetDescendants()) do
 				if bfgcv:IsA("VehicleSeat") then
@@ -567,6 +574,9 @@ trol:AddButton({
 					end
 				end
 			end
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
+			wait(0.1)
+			safetrolcar = false
 		end
   	end    
 })
