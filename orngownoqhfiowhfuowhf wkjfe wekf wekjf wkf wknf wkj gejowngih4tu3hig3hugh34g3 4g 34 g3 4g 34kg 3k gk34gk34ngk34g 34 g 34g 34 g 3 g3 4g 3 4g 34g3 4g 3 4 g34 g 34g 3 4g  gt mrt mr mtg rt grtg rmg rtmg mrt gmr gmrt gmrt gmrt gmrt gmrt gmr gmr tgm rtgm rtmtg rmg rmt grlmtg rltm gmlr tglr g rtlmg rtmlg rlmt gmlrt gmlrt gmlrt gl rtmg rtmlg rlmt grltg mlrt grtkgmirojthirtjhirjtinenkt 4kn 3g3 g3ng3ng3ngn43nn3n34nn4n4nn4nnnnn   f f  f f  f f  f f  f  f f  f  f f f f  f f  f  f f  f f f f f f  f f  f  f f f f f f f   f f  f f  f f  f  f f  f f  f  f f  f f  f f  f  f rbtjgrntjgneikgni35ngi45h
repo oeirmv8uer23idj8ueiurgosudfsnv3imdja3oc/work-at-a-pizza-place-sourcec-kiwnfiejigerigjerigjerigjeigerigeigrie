@@ -174,23 +174,6 @@ trol:AddButton({
         safedestroyroom = true
       	if roomas == "None" then return end
         if methud == "None" then return end
-        if roomas == "Chasier" then
-            targetroom = CFrame.new(math.random(40,55), 10.8767643, math.random(105,135))
-        elseif roomas == "Cook Room" then
-            targetroom = CFrame.new(math.random(52,60), 9.02200365, math.random(39,41))
-        elseif roomas == "Pizza Boxer Room" then
-            targetroom = CFrame.new(math.random(53,60), 9.85873413, math.random(36,41))
-        elseif roomas == "Delivery" then
-            targetroom = CFrame.new(math.random(57,60), 11.85873413, math.random(-16,16))
-		elseif roomas == "Supplier 1" then
-            targetroom = CFrame.new(math.random(0,20), 15.85873413, math.random(-1000,-1075))
-		elseif roomas == "Supplier 2" then
-            targetroom = CFrame.new(math.random(0,20), 12.85873413, math.random(0,-25))
-		elseif roomas == "Manager" then
-            targetroom = CFrame.new(23.503047943115234, 11.55947732925415, 6.556452751159668)
-		elseif roomas == "Manager" then
-            targetroom = CFrame.new(66.9395676, 11.80013275, 57.0806274)
-		end
         if methud == "Bring The Tree That Alr Unanchored" then
 			oldcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
             for wrof,odwadvs in pairs(game.workspace:GetChildren()) do
@@ -198,9 +181,25 @@ trol:AddButton({
                     for wfsds,erajs in pairs(odwadvs:GetDescendants()) do
                         if erajs:IsA("Part") or erajs:IsA("MeshPart") or erajs:IsA("BasePart") then
                             if erajs.Anchored == false then
-								GetRoot(localplr).CFrame = targetroom
+								GetRoot(localplr).CFrame = erajs
 								wait()
-                                erajs.CFrame = targetroom
+								if roomas == "Chasier" then
+									erajs.CFrame = CFrame.new(math.random(40,55), 10.8767643, math.random(105,135))
+								elseif roomas == "Cook Room" then
+									erajs.CFrame = CFrame.new(math.random(52,60), 9.02200365, math.random(39,41))
+								elseif roomas == "Pizza Boxer Room" then
+									erajs.CFrame = CFrame.new(math.random(53,60), 9.85873413, math.random(36,41))
+								elseif roomas == "Delivery" then
+									erajs.CFrame = CFrame.new(math.random(57,60), 11.85873413, math.random(-16,16))
+								elseif roomas == "Supplier 1" then
+									erajs.CFrame = CFrame.new(math.random(0,20), 15.85873413, math.random(-1000,-1075))
+								elseif roomas == "Supplier 2" then
+									erajs.CFrame = CFrame.new(math.random(0,20), 12.85873413, math.random(0,-25))
+								elseif roomas == "Manager" then
+									erajs. = CFrame.new(23.503047943115234, 11.55947732925415, 6.556452751159668)
+								elseif roomas == "Manager" then
+									erajs.CFrame = CFrame.new(66.9395676, 11.80013275, 57.0806274)
+								end
                                 if sethiddenproperty then
                                     sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
                                 end
@@ -217,15 +216,32 @@ trol:AddButton({
             if game.workspace:FindFirstChild("Camera") then
                 game.workspace:FindFirstChild("Camera"):Destroy()
         end
-        for eihn,adim in pairs(game.workspace.Trees:GetChildren()) do
+        for eihn,adim in pairs(game.workspace.Trees:GetChildren()) do wait(0.075)
 GetRoot(localplr).CFrame = adim:FindFirstChild("LeavesMain").CFrame
-            workspace.Main.UprootTree:FireServer(adim) wait(0.2)
-        end
+wait(0.1)
+            workspace.Main.UprootTree:FireServer(adim)        
+		end
         for oefwk,sdvin in pairs(game.workspace:GetChildren()) do
             if sdvin.Name == "Tree" or sdvin.Name == "DeadTree" or sdvin.Name == "SpookyTree" then
                 for wiwefa,jaisf in pairs(sdvin:GetDescendants()) do
                     if jaisf:IsA("Part") or jaisf:IsA("MeshPart") or jaisf:IsA("BasePart") then
-                        jaisf.CFrame = targetroom
+						if roomas == "Chasier" then
+							jaisf.CFrame = CFrame.new(math.random(40,55), 10.8767643, math.random(105,135))
+						elseif roomas == "Cook Room" then
+							jaisf.CFrame = CFrame.new(math.random(52,60), 9.02200365, math.random(39,41))
+						elseif roomas == "Pizza Boxer Room" then
+							jaisf.CFrame = CFrame.new(math.random(53,60), 9.85873413, math.random(36,41))
+						elseif roomas == "Delivery" then
+							jaisf.CFrame = CFrame.new(math.random(57,60), 11.85873413, math.random(-16,16))
+						elseif roomas == "Supplier 1" then
+							jaisf.CFrame = CFrame.new(math.random(0,20), 15.85873413, math.random(-1000,-1075))
+						elseif roomas == "Supplier 2" then
+							jaisf.CFrame = CFrame.new(math.random(0,20), 12.85873413, math.random(0,-25))
+						elseif roomas == "Manager" then
+							jaisf.CFrame = CFrame.new(23.503047943115234, 11.55947732925415, 6.556452751159668)
+						elseif roomas == "Manager" then
+							jaisf.CFrame = CFrame.new(66.9395676, 11.80013275, 57.0806274)
+						end
                     end
                 end
             end
@@ -254,7 +270,23 @@ GetRoot(localplr).CFrame = adim:FindFirstChild("LeavesMain").CFrame
             if sdvin.Name == "Tree" or sdvin.Name == "DeadTree" or sdvin.Name == "SpookyTree" then
                 for wiwefa,jaisf in pairs(sdvin:GetDescendants()) do
                     if jaisf:IsA("Part") or jaisf:IsA("MeshPart") or jaisf:IsA("BasePart") then
-                        jaisf.CFrame = targetroom
+						if roomas == "Chasier" then
+							jaisf.CFrame = CFrame.new(math.random(40,55), 10.8767643, math.random(105,135))
+						elseif roomas == "Cook Room" then
+							jaisf.CFrame = CFrame.new(math.random(52,60), 9.02200365, math.random(39,41))
+						elseif roomas == "Pizza Boxer Room" then
+							jaisf.CFrame = CFrame.new(math.random(53,60), 9.85873413, math.random(36,41))
+						elseif roomas == "Delivery" then
+							jaisfCFrame = CFrame.new(math.random(57,60), 11.85873413, math.random(-16,16))
+						elseif roomas == "Supplier 1" then
+							jaisf.CFrame = CFrame.new(math.random(0,20), 15.85873413, math.random(-1000,-1075))
+						elseif roomas == "Supplier 2" then
+							jaisf.CFrame = CFrame.new(math.random(0,20), 12.85873413, math.random(0,-25))
+						elseif roomas == "Manager" then
+							jaisf.CFrame = CFrame.new(23.503047943115234, 11.55947732925415, 6.556452751159668)
+						elseif roomas == "Manager" then
+							jaisf.CFrame = CFrame.new(66.9395676, 11.80013275, 57.0806274)
+						end
                     end
                 end
             end
